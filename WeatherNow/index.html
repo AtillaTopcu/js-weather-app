@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherNow</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body id="main-body">
+  <div id="main-menu-box">
+    <img src="Images/logo.png" class="main-logo">
+
+    <form class="search-container" id="search-form">
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Search..."
+        autocomplete="off"
+      >
+      <button type="submit">
+        <span class="material-icons">search</span>
+      </button>
+    </form>
+
+    <div class="error-message" id="error-message" style="display:none;"></div>
+
+    <div class="weather-info" style="display:none;">
+      <div class="info-box">
+        <span class="info-label">Temperature</span>
+        <span class="info-value" id="temp-value">-</span>
+      </div>
+
+      <div class="info-box">
+        <span class="info-label">Feels Like</span>
+        <span class="info-value" id="feels-like-value">-</span>
+      </div>
+
+      <div class="info-box">
+        <span class="info-label">Humidity</span>
+        <span class="info-value" id="humidity-value">-</span>
+      </div>
+
+      <div class="info-box">
+        <span class="info-label">Condition</span>
+        <span class="info-value" id="condition-value">-</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
