@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
 #main-body {
     background: url("Images/foggyForestImage.jpeg") center/cover no-repeat;
     height: 100vh;
@@ -19,8 +24,8 @@
 #main-menu-box {
     position: relative;
     width: 990px;
-    height: 575px;
-    margin: 100px auto;
+    height: 595px;
+    margin: 80px auto;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.363);
     box-sizing: border-box;
@@ -30,15 +35,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 40px;
-    padding: 115px 0 80px;
+    gap: 35px;
 }
-
 
 #main-menu-box {
     background: url("Images/foggyForestImage.jpeg") center/cover no-repeat;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 15px 15px 15px rgba(0, 0, 0, 0.35);
-    padding: 115px 0 220px;
+    padding: 70px 0 200px;
 }
 
 .main-logo {
@@ -98,46 +101,126 @@
     font-size: 21px;
 }
 
-.weather-info {
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  align-items: stretch;
-  margin-top: 40px;
-}
-
-.info-box {
-  width: 130px;
-  height: 50px;
-  padding: 10px 16px;
-  border-radius: 25px;
-  background: rgba(0, 0, 0, 0.404);
-  border: 1px solid rgba(255, 255, 255, 0.055);
-  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.7);
-  color: rgba(255, 255, 255, 0.93);
+.weather-panel {
+  width: calc(100% - 80px);
+  margin: auto;
+  padding: 10px 18px 12px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 4px 10px 18px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  backdrop-filter: blur(2px);
+  gap: 14px;
 }
 
-.info-label {
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  opacity: 0.7;
-  margin-bottom: 4px;
-  margin-top: 5px;
+.weather-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.info-value {
-  font-size: 16px;
+.location-name {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 17px;
   font-weight: 500;
+  margin-left: 15px;
+  margin-bottom: 3px;
 }
 
-.error-message {
-  margin-top: 10px;
-  color: #fae8e8;
+.unit-toggle {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 14px;
-  text-shadow: 0 0 4px rgba(0,0,0,0.7);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.unit-toggle:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.03);
+}
+
+.weather-panel-body {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.current-box {
+  flex: 0 0 260px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.current-main-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.current-temp {
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.current-condition {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.current-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.forecast-box {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 6px 4px;
+}
+
+.forecast-item {
+  min-width: 62px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 6px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+}
+
+.forecast-time {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+.forecast-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+}
+
+.forecast-temp {
+  font-size: 20px;
+  font-weight: 500;
 }

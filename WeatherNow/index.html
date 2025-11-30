@@ -26,25 +26,48 @@
 
     <div class="error-message" id="error-message" style="display:none;"></div>
 
-    <div class="weather-info" style="display:none;">
-      <div class="info-box">
-        <span class="info-label">Temperature</span>
-        <span class="info-value" id="temp-value">-</span>
+    <div class="weather-panel" id="weather-panel" style="display:none;">
+      <div class="weather-panel-header">
+        <div class="location-name" id="location-name">—</div>
+        <button type="button" class="unit-toggle" id="unit-toggle">°C</button>
       </div>
 
-      <div class="info-box">
-        <span class="info-label">Feels Like</span>
-        <span class="info-value" id="feels-like-value">-</span>
-      </div>
+      <div class="weather-panel-body">
+        <div class="current-box">
+          <div class="current-main-row">
+            <span class="current-temp" id="temp-value">-</span>
+            <span class="current-condition" id="condition-value">-</span>
+          </div>
 
-      <div class="info-box">
-        <span class="info-label">Humidity</span>
-        <span class="info-value" id="humidity-value">-</span>
-      </div>
+          <div class="current-row">
+            <span>Feels like</span>
+            <span id="feels-like-value">-</span>
+          </div>
 
-      <div class="info-box">
-        <span class="info-label">Condition</span>
-        <span class="info-value" id="condition-value">-</span>
+          <div class="current-row">
+            <span>Wind</span>
+            <span id="wind-value">-</span>
+          </div>
+
+          <div class="current-row">
+            <span>Humidity</span>
+            <span id="humidity-value">-</span>
+          </div>
+
+          <div class="current-row">
+            <span>Sunrise</span>
+            <span id="sunrise-value">-</span>
+          </div>
+
+          <div class="current-row">
+            <span>Sunset</span>
+            <span id="sunset-value">-</span>
+          </div>
+        </div>
+
+        <div class="forecast-box" id="forecast-box">
+          
+        </div>
       </div>
     </div>
   </div>
