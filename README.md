@@ -23,6 +23,5 @@ A modern and minimal weather application built with pure **HTML, CSS, and Vanill
 2. Add your API key inside `script.js`:
 
 🖼️ Preview
-<img width="1328" height="713" alt="image" src="https://github.com/user-attachments/assets/c270c408-120d-480c-ba80-905516ca8bf4" />
 <img width="1134" height="706" alt="image" src="https://github.com/user-attachments/assets/de5b6f1e-c349-48f0-bbeb-df5ae7e551c1" />
 
